@@ -1,0 +1,78 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.IO;
+
+namespace ConsoleApp20
+{
+    interface IAll
+    {        
+        void worK();       
+        void Work();
+    }
+    class Worker : IAll
+    {
+        public void worK()
+        {
+            Console.WriteLine("1");
+        }
+        public void Work()
+        {
+            Console.WriteLine("2");
+        }
+    }
+    class Staff : IAll
+    { 
+        public void worK()
+        {
+            Console.WriteLine("3");
+        }
+        public void Work()
+        {
+           Console.WriteLine("4");
+        }
+    }
+    class Engineer : IAll
+    {
+        public void worK()
+        {
+            Console.WriteLine("5");
+        }
+        public void Work()
+        {
+            Console.WriteLine("6");
+        }
+    }
+
+    class Admin : IAll
+    {
+        public void worK()
+        {
+            Console.WriteLine("7");
+        }
+        public void Work()
+        {
+            Console.WriteLine("8");
+        }
+    }
+    public class v2
+    {
+        public static void Main()
+        {
+            IAll s;          
+            s = new Worker();
+            s.worK(); 
+            s.Work(); 
+            s = new Staff();
+            s.worK(); 
+            s.Work(); 
+            s = new Engineer();
+            s.worK(); 
+            s.Work();
+            s = new Admin();
+            s.worK();
+            s.Work();
+        }
+    }
+}
